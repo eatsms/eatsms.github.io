@@ -1,0 +1,132 @@
+* {margin:0;padding:0;}
+body,html {height:100%;}
+body {min-height:100%; font: 14px/16px Roboto, sans-serif; color: #6a4c6a; }
+    
+a, img {outline:none;border:none;}
+a {text-decoration: none;cursor: pointer; color: #e71531; }
+a:hover {text-decoration:none; color:#6a4c6a;}
+h1, h2, h3, h4, h5, h6 { font-size: 20px; margin: 0 0 18px; font-weight: normal; line-height: 1;}
+
+/*#e71531*/
+/*#6a4c6a*/
+
+body {
+	background: #f5f5f5;
+}
+
+header{
+	height: 58px;
+	background: #6a4c6a url("icons/left.png") left center no-repeat;
+	background-size: contain;
+	position: relative;
+	box-shadow: 0px 1px 3px 0px rgba(1, 1, 1, 0.13);
+	margin-bottom: 32px;
+}
+
+.wrapper{
+	max-width: 420px;
+	margin: 0 auto;
+	padding: 0px 12px;
+}
+
+.logo{
+	margin-left: 33px;
+	margin-top: 5px;
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background: url("icons/trol.png") left center no-repeat;
+	background-size: contain;	
+}
+
+.block{
+	background: #ffffff;
+	box-shadow: 0px 1px 3px 0px rgba(1, 1, 1, 0.13);
+	margin-bottom: 28px;
+	padding: 16px 20px;
+}
+
+.block_title{
+
+}
+
+.route_item{
+	display: block;
+	margin-bottom: 24px;
+	color: #6a4c6a;
+}
+
+.route_list{
+	padding-top: 16px;
+}
+
+.route_type{
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+
+.route_item .number{
+	border-radius: 8px 0px 0px 0px;
+	width: 32px;
+	height: 36px;
+	background: #e71531;
+	color: #ffffff;
+	text-align: center;
+	display: block;
+	float: left;
+	line-height: 36px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.route_item .price{
+	width: 32px;
+	height: 36px;
+	text-align: center;
+	display: block;
+	line-height: 28px;
+	font-size: 18px;
+	float: right;
+	font-weight: bold;
+	background: #6a4c6a;
+	color: #ffffff;
+	position: relative;
+}
+
+.route_item .price:after{
+	content: "грн";
+	font-size: 8px;
+	line-height: 8px;
+	font-weight: normal;
+	display: block;
+	position: absolute;
+	right: 0px;
+	left: 0px;
+	bottom: 6px;
+}
+
+.route_item .name{
+	font-weight: bold;
+	margin-left: 8px;
+}
+
+.route_item .info{
+	height: 36px;
+	display: block;
+	/*padding-left: 28px;*/
+	margin-left: 32px;
+	margin-right: 32px;
+	border-top: 1px solid #6a4c6a;
+	border-bottom: 1px solid #6a4c6a;
+	padding-top: 6px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+
+
+.route_item:after{
+	display: block;
+	clear: both;
+	content: "";
+}
