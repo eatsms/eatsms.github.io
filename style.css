@@ -1,6 +1,6 @@
 * {margin:0;padding:0;}
 body,html {height:100%;}
-body {min-height:100%; font: 14px/16px Roboto, sans-serif; color: #6a4c6a; }
+body {min-height:100%; font: 16px/18px Roboto, sans-serif; color: #6a4c6a; }
     
 a, img {outline:none;border:none;}
 a {text-decoration: none;cursor: pointer; color: #e71531; }
@@ -43,90 +43,100 @@ header{
 	background: #ffffff;
 	box-shadow: 0px 1px 3px 0px rgba(1, 1, 1, 0.13);
 	margin-bottom: 28px;
-	padding: 16px 20px;
+	padding-bottom: 18px;
+	border-radius: 8px;
+}
+
+.block_wrapper{
+	padding: 0px 12px;
+}
+
+.list_item{
+	padding: 0px 12px;
 }
 
 .block_title{
-
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 12px 0px 12px;
+	margin-bottom: 18px;
 }
 
 .route_item{
-	display: block;
-	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 52px;
 	color: #6a4c6a;
 }
 
 .route_list{
-	padding-top: 16px;
+	/*padding-top: 16px;*/
 }
 
 .route_type{
 	font-size: 16px;
 	margin-bottom: 16px;
+	margin-top: 16px;
 }
 
 .route_item .number{
-	border-radius: 8px 0px 0px 0px;
-	width: 32px;
+	border-radius: 50%;
+	width: 36px;
 	height: 36px;
-	background: #e71531;
+	background: #6a4c6a;
 	color: #ffffff;
 	text-align: center;
-	display: block;
-	float: left;
 	line-height: 36px;
 	font-size: 18px;
 	font-weight: bold;
 }
 
 .route_item .price{
-	width: 32px;
-	height: 36px;
-	text-align: center;
+	text-align: right;
 	display: block;
 	line-height: 28px;
 	font-size: 18px;
-	float: right;
 	font-weight: bold;
-	background: #6a4c6a;
-	color: #ffffff;
-	position: relative;
 }
 
 .route_item .price:after{
-	content: "грн";
-	font-size: 8px;
-	line-height: 8px;
+	content: " грн";
+	font-size: 12px;
+	/*line-height: 8px;*/
 	font-weight: normal;
-	display: block;
-	position: absolute;
-	right: 0px;
-	left: 0px;
-	bottom: 6px;
+	/*display: block;*/
+	/*position: absolute;*/
+	/*right: 0px;*/
+	/*left: 0px;*/
+	/*bottom: 6px;*/
 }
 
 .route_item .name{
 	font-weight: bold;
-	margin-left: 8px;
 }
 
 .route_item .info{
-	height: 36px;
-	display: block;
-	/*padding-left: 28px;*/
-	margin-left: 32px;
-	margin-right: 32px;
-	border-top: 1px solid #6a4c6a;
-	border-bottom: 1px solid #6a4c6a;
-	padding-top: 6px;
 	box-sizing: border-box;
-	text-align: center;
+	text-align: left;
+	line-height: 1.4em;
+	flex-grow: 1;
+	padding-left: 18px;
 }
 
+.route_item .on-number{
+	font-size: 12px;
+}
 
+@media (max-width: 380px){
+	header{
+		width: 100%;
+		position: fixed;
+		top: 0px;
+	}
 
-.route_item:after{
-	display: block;
-	clear: both;
-	content: "";
+	body{
+		padding-top: 80px;
+	}
 }
