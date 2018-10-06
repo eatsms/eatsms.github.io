@@ -134,7 +134,7 @@ header .desc h1{
 .route_item .info{
 	box-sizing: border-box;
 	text-align: left;
-	line-height: 1.4em;
+	line-height: 1.2em;
 	flex-grow: 1;
 	padding-left: 18px;
 }
