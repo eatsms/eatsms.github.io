@@ -92,9 +92,9 @@ header .desc h1{
 }
 
 .route_type{
-	font-size: 16px;
-	margin-bottom: 16px;
-	margin-top: 16px;
+	font-size: 15px;
+	margin-bottom: 6px;
+	margin-top: 12px;
 }
 
 .route_item .number{
@@ -108,7 +108,9 @@ header .desc h1{
 	font-size: 18px;
 	font-weight: bold;
 	background-image: url("icons/trol.png");
-	background-size: contain;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .route_item .price{
