@@ -23,6 +23,20 @@ header{
 	margin-bottom: 32px;
 }
 
+header .desc{
+	float: right;
+	padding-right: 16px;
+	padding-top: 4px;
+}
+
+header .desc h1{
+	text-align: right;
+	color: #ffffff;
+	max-width: 170px;
+	line-height: 1.2em;
+	margin-bottom: 0px;
+}
+
 .wrapper{
 	max-width: 420px;
 	margin: 0 auto;

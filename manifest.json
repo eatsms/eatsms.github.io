@@ -1,6 +1,6 @@
 {
-  "name": "ЕАТ СМС коди оплати проїзду",
-  "short_name": "ЕАТ СМС",
+  "name": "Sms квиток коди оплати проїзду",
+  "short_name": "Sms квиток",
   "lang": "uk-UA",
   "start_url": "/index.html",
   "display": "standalone",
