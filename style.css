@@ -105,6 +105,8 @@ header .desc h1{
 	line-height: 36px;
 	font-size: 18px;
 	font-weight: bold;
+	background-image: url("icons/trol.png");
+	background-size: contain;
 }
 
 .route_item .price{
