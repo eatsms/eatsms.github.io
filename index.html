@@ -149,7 +149,11 @@
             var links = document.getElementsByClassName('route_item');
             for (var i = 0; i < links.length; ++i) {
                 var item = links[i];  
-                item.href = item.href.replace('?',";");
+                // item.href = item.href.replace('?',";");
+                // iOS8+
+                item.href = item.href.replace('&',";");
+                // iOS11 bug: double open link to fill the fields
+                // ToDo: add click listener
             }
         }
     })();
