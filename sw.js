@@ -1,4 +1,4 @@
-var cacheName = 'pwa-v1';
+var cacheName = 'pwa-v2';
 var filesToCache = [
   '/',
   '/index.html',
@@ -21,6 +21,18 @@ self.addEventListener('install', function(e) {
   );
 });
 self.addEventListener('activate',  event => {
+  console.log('[ServiceWorker] Activate');
+  event.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+
   event.waitUntil(self.clients.claim());
 });
 self.addEventListener('fetch', event => {
