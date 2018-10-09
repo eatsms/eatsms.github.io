@@ -19,9 +19,9 @@
 <meta name="msapplication-starturl" content="/index.html">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name="google" content="notranslate">
 
-<link rel="apple-touch-icon" sizes="72x72" href="icons/l-72.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icons/l-144.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/ios-144.png">
 <link rel="icon" type="image/png" sizes="192x192"  href="icons/l-192.png">
 <link rel="icon" type="image/png" sizes="96x96" href="icons/l-96.png">
 <link rel="manifest" href="/manifest.json">
@@ -142,17 +142,14 @@
     </footer>
 </article>
 
+<script src="./sms-link.min.js"></script>
 <script>
-    (function() {
-        if ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ){
-            var links = document.getElementsByClassName('route_item');
-            for (var i = 0; i < links.length; ++i) {
-                var item = links[i];  
-                item.href = item.href.replace('?',";");
-            }
-        }
-    })();
-
+    document.addEventListener('DOMContentLoaded', (function () {
+        link = new SMSLink.link();
+        link.replaceAll();
+    }), false);
+</script>
+<script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js', {
             scope: '.' // <--- THIS BIT IS REQUIRED
