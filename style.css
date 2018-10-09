@@ -40,7 +40,7 @@ header .desc h1{
 .wrapper{
 	max-width: 420px;
 	margin: 0 auto;
-	padding: 0px 12px;
+	padding: 0px 16px;
 }
 
 .logo{
@@ -64,18 +64,18 @@ header .desc h1{
 }
 
 .block_wrapper{
-	padding: 0px 12px;
+	padding: 0px 16px;
 }
 
 .list_item{
-	padding: 0px 12px;
+	padding: 0px 16px;
 }
 
 .block_title{
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: bold;
-	padding: 12px 12px 0px 12px;
+	padding: 12px 16px 0px 16px;
 	margin-bottom: 18px;
 }
 
@@ -162,15 +162,103 @@ header .desc h1{
 }
 
 
-/*@media (min-width: 900px){
-	article{
+.banner{
+	display: none;
+}
+
+aside{
+	display: none;
+}
+
+article{
+	line-height: 1.6em;
+}
+
+article p{
+	margin-bottom: 12px;
+}
+
+article ol, 
+article ul{
+	padding-left: 16px;
+	margin-bottom: 16px;
+}
+
+article li{
+	margin-bottom: 8px;
+}
+
+.text-icon{
+	vertical-align: top;
+}
+
+@media (min-width: 900px){
+
+	.page-layout{
 		margin: 0 auto;
-		background: url(phone.png) center center no-repeat;
-		max-width: 360px;
-		-ms-transform: scale(0.75, 0.75);
-		-webkit-transform: scale(0.75, 0.75);
-		transform: scale(0.75, 0.75);
-		transform-origin: top left;
-		background-size: contain;
+		max-width: 860px;
 	}
-}*/
+
+	.page-layout:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	.main-content{
+		
+		float: left;
+		width: 100%;
+		margin-right: -360px;
+		/*background-size: contain;*/
+	}
+
+	.phone-wrapper{
+		background: url(img/phone.png) left top no-repeat;
+		padding-top: 76px;
+		padding-left: 16px;
+		max-width: 396px;
+		box-sizing: border-box;
+		max-height: 650px;
+		padding-bottom: 80px;
+		overflow: hidden;
+	}
+
+	.main-content .left-col{
+		margin-right: 360px;
+	}
+
+	aside{
+		display: block;
+		float: right;
+		width: 360px;
+	}
+
+	main{
+		-ms-transform: scale(0.732, 0.732);
+		-webkit-transform: scale(0.732, 0.732);
+		transform: scale(0.732, 0.732);
+		transform-origin: top left;
+
+	}
+
+	.banner{
+		display: block;
+		background: #6a4c6a;
+		color: #ffffff;
+		/*text-align: center;*/
+		line-height: 1.2em;
+		padding: 48px 0px;
+		margin-bottom: 48px;
+	}
+
+	.banner h1{
+		font-size: 32px;
+		margin-bottom: 32px;
+	}
+
+	.qr{
+		text-align: center;
+		margin-bottom: 24px;
+	}
+}
