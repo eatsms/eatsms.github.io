@@ -1,4 +1,4 @@
-var cacheName = 'pwa-v2';
+var cacheName = 'pwa-v3';
 var filesToCache = [
   '/',
   '/index.html',
@@ -10,6 +10,7 @@ var filesToCache = [
   '/icons/l-512.png',
   '/icons/l-72.png',
   '/icons/l-96.png',
+  '/sms-link.min.js'
 ];
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
