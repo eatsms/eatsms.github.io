@@ -160,3 +160,17 @@ header .desc h1{
 		padding-top: 80px;
 	}
 }
+
+
+/*@media (min-width: 900px){
+	article{
+		margin: 0 auto;
+		background: url(phone.png) center center no-repeat;
+		max-width: 360px;
+		-ms-transform: scale(0.75, 0.75);
+		-webkit-transform: scale(0.75, 0.75);
+		transform: scale(0.75, 0.75);
+		transform-origin: top left;
+		background-size: contain;
+	}
+}*/
