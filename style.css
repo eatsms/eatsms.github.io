@@ -247,6 +247,19 @@ article li{
 	vertical-align: top;
 }
 
+.stud .no-stud{
+	display: none;
+}
+
+.stud-only{
+	display: none;
+}
+
+.stud .route_item.stud-only{
+	display: flex;
+}
+
+
 @media (min-width: 900px){
 
 	.page-layout{
