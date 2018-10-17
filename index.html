@@ -280,8 +280,10 @@
             body.classList.remove("stud");
         }
         document.getElementById('stud').checked = enable;
-        if(localStorage.getItem('ticket_stud')!=enable){
-            localStorage.setItem('ticket_stud', enable);
+        localValue = localStorage.getItem('ticket_stud')?true:false;
+        if(localValue!=enable){
+            enable ? localStorage.setItem('ticket_stud', enable) : localStorage.removeItem('ticket_stud');
+            console.log('localStorage '+localStorage.getItem('ticket_stud'));
         }
     }
 </script>
