@@ -206,7 +206,13 @@
                             <div class="block intro">
                                 <h2 class="block_title">Інформація</h2>
                                 <div class="wrapper">
-                                    Джерело: <a href="https://kyivstar.ua/uk/mm/news-and-promotions/v-ivano-frankivsku-vpershe-v-ukrayini-zapushcheno-servis-sms-oplat-za-proyizd">Сайт київстар</a>
+                                    <article>
+                                        <p>Скористатися новим способом оплати дуже легко: достатньо відправити безкоштовне SMS із кодом відповідного маршруту на номер 877 та зачекати 1-2 хвилини для отримання підтвердження сплати за проїзд. Для здійснення операції необхідно мати на мобільному рахунку кошти для її проведення. Усі податки та збори враховано, пасажир сплачує лише вартість проїзду.</p>
+
+                                        <p>Сервіс доступний усім абонентам передплаченого зв’язку від Київстар</p>
+
+                                        <p>Джерело: <a href="https://kyivstar.ua/uk/mm/news-and-promotions/v-ivano-frankivsku-vpershe-v-ukrayini-zapushcheno-servis-sms-oplat-za-proyizd">kyivstar.ua</a></p>
+                                    </article>
                                 </div>
                             </div>
                         </div>
@@ -257,15 +263,27 @@
     }), false);
     document.addEventListener('DOMContentLoaded',function() {
         document.getElementById('stud').onchange=function(event){
-            var body = document.getElementsByTagName("body")[0]; 
-            if(this.checked){
-                body.classList.add("stud");
-            }
-            else{
-                body.classList.remove("stud");
-            }
+            setStud(this.checked);
         }
+        setStud(localStorage.getItem('ticket_stud'));
     },false);
+
+    function setStud(enable){
+
+        enable = enable?true:false;
+
+        var body = document.getElementsByTagName("body")[0]; 
+        if(enable){
+            body.classList.add("stud");
+        }
+        else{
+            body.classList.remove("stud");
+        }
+        document.getElementById('stud').checked = enable;
+        if(localStorage.getItem('ticket_stud')!=enable){
+            localStorage.setItem('ticket_stud', enable);
+        }
+    }
 </script>
 <script>
     if ('serviceWorker' in navigator) {
