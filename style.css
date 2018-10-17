@@ -292,6 +292,15 @@ article li{
 		overflow: hidden;
 	}
 
+	.phone-screen{
+		max-height: 490px;
+		overflow: hidden;
+	}
+
+	.phone-screen::-webkit-scrollbar { width: 0 !important }
+	.phone-screen { -ms-overflow-style: none; }
+	/*.phone-screen { overflow: -moz-scrollbars-none; }*/
+
 	.main-content .left-col{
 		margin-right: 360px;
 	}
