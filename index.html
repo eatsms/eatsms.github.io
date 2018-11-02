@@ -84,7 +84,7 @@
                             </div>
 
                             <div class="block route">
-                                <h2 class="block_title">Маршрут</h2>
+                                <h2 class="block_title">Виберіть маршрут</h2>
                                 <div class="route_list">
                                     <!-- <h3 class="route_type block_wrapper">Тролейбус</h3> -->
                                     <a href="sms:877?body=SB2" class="route_item block_wrapper no-stud">
@@ -208,7 +208,7 @@
                             </div>
 
                             <div class="block intro">
-                                <h2 class="block_title">Інформація</h2>
+                                <h2 class="block_title">Як користуватися</h2>
                                 <div class="wrapper">
                                     <article>
                                         <p>Скористатися новим способом оплати дуже легко: достатньо відправити безкоштовне SMS із кодом відповідного маршруту на номер 877 та зачекати 1-2 хвилини для отримання підтвердження сплати за проїзд. Для здійснення операції необхідно мати на мобільному рахунку кошти для її проведення. Усі податки та збори враховано, пасажир сплачує лише вартість проїзду.</p>
@@ -216,13 +216,14 @@
                                         <p>Сервіс доступний усім абонентам передплаченого зв’язку від Київстар</p>
 
                                         <p>Джерело: <a href="https://kyivstar.ua/uk/mm/news-and-promotions/v-ivano-frankivsku-vpershe-v-ukrayini-zapushcheno-servis-sms-oplat-za-proyizd">kyivstar.ua</a></p>
+                        
                                     </article>
                                 </div>
                             </div>
                         </div>
 
                         <footer>
-                            
+                            <p><a onclick="share(); return false;">Поширити</a><p>
                         </footer>
                     </main>
                 </div>
@@ -293,6 +294,17 @@
             console.log('localStorage '+localStorage.getItem('ticket_stud'));
         }
     }
+  
+    function share(){
+      if (navigator.share) {
+        let url = document.location.href;
+        const canonicalElement = document.querySelector('link[rel=canonical]');
+        if (canonicalElement !== null) {
+            url = canonicalElement.href;
+        }
+        navigator.share({url: url});
+      }
+    }
 </script>
 <script>
     if ('serviceWorker' in navigator) {
@@ -308,10 +320,5 @@
     }
 </script>
 
-<!-- СМС коди оплати проїзду в тролейбусі, автобусі Івано-Франківськ, електронний SMS квиток ЕАТ -->
-<!-- Сплачуйте проізд у 2 кліки. СМС коди оплати у вашому смартфоні. SMS-квиток у комунальному транспорті Івано-Франківська (тролейбус, автобус) -->
-<!-- СМС квиток у 2 кліки. Коди оплати у вашому смартфоні. Діє у комунальному транспорті Івано-Франківська (тролейбус, автобус) ЕАТ -->
-<!-- Електронний смс квиток Івано-Фракнівськ ЕАТ -->
-<!-- Смс квиток Київстар ІФ -->
 </body>
 </html>
